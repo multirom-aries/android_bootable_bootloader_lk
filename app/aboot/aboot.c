@@ -145,6 +145,10 @@ static const char *auth_kernel = " androidboot.authorized_kernel=true";
 static const char *secondary_gpt_enable = " gpt";
 static const char *mdtp_activated_flag = " mdtp";
 
+// fergy: FLEX2 ->
+static const char *androidboot_fota = " androidboot.fota=";
+static const char *lge_signed_image = " lge.signed_image=";
+// fergy: FLEX2 <-
 static const char *baseband_apq     = " androidboot.baseband=apq";
 static const char *baseband_msm     = " androidboot.baseband=msm";
 static const char *baseband_csfb    = " androidboot.baseband=csfb";
