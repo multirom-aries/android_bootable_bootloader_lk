@@ -146,8 +146,14 @@ static const char *secondary_gpt_enable = " gpt";
 static const char *mdtp_activated_flag = " mdtp";
 
 // fergy: FLEX2 ->
-static const char *androidboot_fota = " androidboot.fota=";
-static const char *lge_signed_image = " lge.signed_image=";
+static const char *battchg_logo			= " androidboot.mode=chargerlogo";
+static const char *lcdbreak_mode		= " androidboot.lge.lcdbreak_mode";
+static const char *androidboot_fota		= " androidboot.fota=";
+static const char *androidboot_fota_reboot	= " androidboot.fota_reboot";
+static const char *androidboot_encrypt_minios	= " androidboot.encrypt_minios";
+static const char *androidboot_laf		= " androidboot.laf";
+static const char *lge_signed_image_true	= " lge.signed_image=true";
+static const char *lge_signed_image_false	= " lge.signed_image=false";
 // fergy: FLEX2 <-
 static const char *baseband_apq     = " androidboot.baseband=apq";
 static const char *baseband_msm     = " androidboot.baseband=msm";
