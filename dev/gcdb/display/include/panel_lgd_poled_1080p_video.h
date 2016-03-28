@@ -29,51 +29,51 @@
  * SUCH DAMAGE.
  */
 
-#ifndef _PANEL_LGD_1080P_VIDEO_H_
-#define _PANEL_LGD_1080P_VIDEO_H_
+#ifndef _PANEL_LGD_POLED_1080P_VIDEO_H_
+#define _PANEL_LGD_POLED_1080P_VIDEO_H_
 
 #include "panel.h"
 
-static struct panel_config lgd_1080p_video_panel_data = {
+static struct panel_config lgd_poled_1080p_video_panel_data = {
 	"qcom,mdss_dsi_lgd_poled_1080p_video", "dsi:0:", "qcom,mdss-dsi-panel",
 	10, 0, "DISPLAY_1", 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static struct panel_resolution lgd_1080p_video_panel_res = {
+static struct panel_resolution lgd_poled_1080p_video_panel_res = {
 	1080, 1920, 100, 12, 60, 0, 25, 6, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static struct color_info lgd_1080p_video_color = {
+static struct color_info lgd_poled_1080p_video_color = {
 	24, 0, 0xff, 0, 0, 0
 };
 
-static char lgd_1080p_video_on_cmd0[] = {
+static char lgd_poled_1080p_video_on_cmd0[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x11, 0x00, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd1[] = {
+static char lgd_poled_1080p_video_on_cmd1[] = {
 	0x02, 0x00, 0x29, 0xC0,
 	0xB0, 0x04, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd2[] = {
+static char lgd_poled_1080p_video_on_cmd2[] = {
 	0x07, 0x00, 0x29, 0xC0,
 	0xB3, 0x14, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd3[] = {
+static char lgd_poled_1080p_video_on_cmd3[] = {
 	0x03, 0x00, 0x29, 0xC0,
 	0xB6, 0x3A, 0xC3, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd4[] = {
+static char lgd_poled_1080p_video_on_cmd4[] = {
 	0x02, 0x00, 0x29, 0xC0,
 	0xC0, 0x00, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd5[] = {
+static char lgd_poled_1080p_video_on_cmd5[] = {
 	0x23, 0x00, 0x29, 0xC0,
 	0xC1, 0xC4, 0x60, 0x10,
 	0xEB, 0xFF, 0x6F, 0xCE,
@@ -86,13 +86,13 @@ static char lgd_1080p_video_on_cmd5[] = {
 	0x22, 0x00, 0x01, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd6[] = {
+static char lgd_poled_1080p_video_on_cmd6[] = {
 	0x08, 0x00, 0x29, 0xC0,
 	0xC2, 0x31, 0xF7, 0x80,
 	0x08, 0x08, 0x00, 0x00,
 };
 
-static char lgd_1080p_video_on_cmd7[] = {
+static char lgd_poled_1080p_video_on_cmd7[] = {
 	0x17, 0x00, 0x29, 0xC0,
 	0xC4, 0x70, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -102,7 +102,7 @@ static char lgd_1080p_video_on_cmd7[] = {
 	0x00, 0x06, 0x05, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd8[] = {
+static char lgd_poled_1080p_video_on_cmd8[] = {
 	0x29, 0x00, 0x29, 0xC0,
 	0xC6, 0xC8, 0x01, 0x69,
 	0x01, 0x69, 0x00, 0x00,
@@ -117,26 +117,26 @@ static char lgd_1080p_video_on_cmd8[] = {
 	0x08, 0xFF, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd9[] = {
+static char lgd_poled_1080p_video_on_cmd9[] = {
 	0x0A, 0x00, 0x29, 0xC0,
 	0xCB, 0x31, 0xFC, 0x3F,
 	0x8C, 0x00, 0x00, 0x00,
 	0x00, 0xC0, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd10[] = {
+static char lgd_poled_1080p_video_on_cmd10[] = {
 	0x02, 0x00, 0x29, 0xC0,
 	0xCC, 0x0B, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd11[] = {
+static char lgd_poled_1080p_video_on_cmd11[] = {
 	0x0B, 0x00, 0x29, 0xC0,
 	0xD0, 0x22, 0x82, 0xBB,
 	0x19, 0x99, 0x4C, 0x19,
 	0x19, 0x0C, 0x00, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd12[] = {
+static char lgd_poled_1080p_video_on_cmd12[] = {
 	0x1a, 0x00, 0x29, 0xC0,
 	0xD3, 0x1B, 0x33, 0xBB,
 	0xBB, 0xB3, 0x33, 0x33,
@@ -147,13 +147,13 @@ static char lgd_1080p_video_on_cmd12[] = {
 	0xBF, 0x44, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd13[] = {
+static char lgd_poled_1080p_video_on_cmd13[] = {
 	0x08, 0x00, 0x29, 0xC0,
 	0xD5, 0x06, 0x00, 0x00,
 	0x01, 0x67, 0x01, 0x67,
 };
 
-static char lgd_1080p_video_on_cmd14[] = {
+static char lgd_poled_1080p_video_on_cmd14[] = {
 	0x1f, 0x00, 0x29, 0xC0,
 	0xC7, 0x0C, 0x1B, 0x22,
 	0x2B, 0x37, 0x43, 0x4C,
@@ -165,7 +165,7 @@ static char lgd_1080p_video_on_cmd14[] = {
 	0x67, 0x6B, 0x6E, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd15[] = {
+static char lgd_poled_1080p_video_on_cmd15[] = {
 	0x14, 0x00, 0x29, 0xC0,
 	0xC8, 0x01, 0x00, 0x00,
 	0x03, 0xFB, 0xFB, 0xEF,
@@ -174,103 +174,103 @@ static char lgd_1080p_video_on_cmd15[] = {
 	0x03, 0xFB, 0xFB, 0xEF,
 };
 
-static char lgd_1080p_video_on_cmd16[] = {
+static char lgd_poled_1080p_video_on_cmd16[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x51, 0xFF, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd17[] = {
+static char lgd_poled_1080p_video_on_cmd17[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x53, 0x2C, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd18[] = {
+static char lgd_poled_1080p_video_on_cmd18[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x55, 0x03, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd19[] = {
+static char lgd_poled_1080p_video_on_cmd19[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x35, 0x00, 0xFF, 0xFF,
 };
 
-static char lgd_1080p_video_on_cmd20[] = {
+static char lgd_poled_1080p_video_on_cmd20[] = {
 	0x02, 0x00, 0x39, 0xC0,
 	0x29, 0x00, 0xFF, 0xFF,
 };
 
-static struct mipi_dsi_cmd lgd_1080p_video_on_command[] = {
-	{0x8, lgd_1080p_video_on_cmd0, 0x78},
-	{0x8, lgd_1080p_video_on_cmd1, 0x00},
-	{0xc, lgd_1080p_video_on_cmd2, 0x00},
-	{0x8, lgd_1080p_video_on_cmd3, 0x00},
-	{0x8, lgd_1080p_video_on_cmd4, 0x00},
-	{0x28, lgd_1080p_video_on_cmd5, 0x00},
-	{0xc, lgd_1080p_video_on_cmd6, 0x00},
-	{0x1c, lgd_1080p_video_on_cmd7, 0x00},
-	{0x30, lgd_1080p_video_on_cmd8, 0x00},
-	{0x10, lgd_1080p_video_on_cmd9, 0x00},
-	{0x8, lgd_1080p_video_on_cmd10, 0x00},
-	{0x10, lgd_1080p_video_on_cmd11, 0x00},
-	{0x20, lgd_1080p_video_on_cmd12, 0x00},
-	{0xc, lgd_1080p_video_on_cmd13, 0x00},
-	{0x24, lgd_1080p_video_on_cmd14, 0x00},
-	{0x18, lgd_1080p_video_on_cmd15, 0x00},
-	{0x8, lgd_1080p_video_on_cmd16, 0x00},
-	{0x8, lgd_1080p_video_on_cmd17, 0x00},
-	{0x8, lgd_1080p_video_on_cmd18, 0x00},
-	{0x8, lgd_1080p_video_on_cmd19, 0x00},
-	{0x8, lgd_1080p_video_on_cmd20, 0x64}
+static struct mipi_dsi_cmd lgd_poled_1080p_video_on_command[] = {
+	{0x8, lgd_poled_1080p_video_on_cmd0, 0x78},
+	{0x8, lgd_poled_1080p_video_on_cmd1, 0x00},
+	{0xc, lgd_poled_1080p_video_on_cmd2, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd3, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd4, 0x00},
+	{0x28, lgd_poled_1080p_video_on_cmd5, 0x00},
+	{0xc, lgd_poled_1080p_video_on_cmd6, 0x00},
+	{0x1c, lgd_poled_1080p_video_on_cmd7, 0x00},
+	{0x30, lgd_poled_1080p_video_on_cmd8, 0x00},
+	{0x10, lgd_poled_1080p_video_on_cmd9, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd10, 0x00},
+	{0x10, lgd_poled_1080p_video_on_cmd11, 0x00},
+	{0x20, lgd_poled_1080p_video_on_cmd12, 0x00},
+	{0xc, lgd_poled_1080p_video_on_cmd13, 0x00},
+	{0x24, lgd_poled_1080p_video_on_cmd14, 0x00},
+	{0x18, lgd_poled_1080p_video_on_cmd15, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd16, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd17, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd18, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd19, 0x00},
+	{0x8, lgd_poled_1080p_video_on_cmd20, 0x64}
 };
 
-#define LGD_1080P_VIDEO_ON_COMMAND 21
+#define lgd_poled_1080p_VIDEO_ON_COMMAND 21
 
-static char lgd_1080p_videooff_cmd0[] = {
+static char lgd_poled_1080p_videooff_cmd0[] = {
 	0x28, 0x00, 0x05, 0x80
 };
 
-static char lgd_1080p_videooff_cmd1[] = {
+static char lgd_poled_1080p_videooff_cmd1[] = {
 	0x10, 0x00, 0x05, 0x80
 };
 
-static struct mipi_dsi_cmd lgd_1080p_video_off_command[] = {
-	{0x4, lgd_1080p_videooff_cmd0, 0x32},
-	{0x4, lgd_1080p_videooff_cmd1, 0x78}
+static struct mipi_dsi_cmd lgd_poled_1080p_video_off_command[] = {
+	{0x4, lgd_poled_1080p_videooff_cmd0, 0x32},
+	{0x4, lgd_poled_1080p_videooff_cmd1, 0x78}
 };
 
-#define LGD_1080P_VIDEO_OFF_COMMAND 2
+#define lgd_poled_1080p_VIDEO_OFF_COMMAND 2
 
 
-static struct command_state lgd_1080p_video_state = {
+static struct command_state lgd_poled_1080p_video_state = {
 	0, 1
 };
 
-static struct commandpanel_info lgd_1080p_video_command_panel = {
+static struct commandpanel_info lgd_poled_1080p_video_command_panel = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static struct videopanel_info lgd_1080p_video_video_panel = {
+static struct videopanel_info lgd_poled_1080p_video_video_panel = {
 	1, 0, 0, 0, 1, 1, 2, 0, 0x9
 };
 
-static struct lane_configuration lgd_1080p_video_lane_config = {
+static struct lane_configuration lgd_poled_1080p_video_lane_config = {
 	4, 0, 1, 1, 1, 1
 };
 
-static const uint32_t lgd_1080p_video_timings[] = {
+static const uint32_t lgd_poled_1080p_video_timings[] = {
 	0xAE, 0x44, 0x37, 0x00, 0x5D, 0x55, 0x39, 0x46, 0x5B, 0x03, 0x04, 0x00
 };
 
-static struct panel_timing lgd_1080p_video_timing_info = {
+static struct panel_timing lgd_poled_1080p_video_timing_info = {
 	0, 4, 0x1e, 0x34
 };
 
-static struct panel_reset_sequence lgd_1080p_video_reset_seq = {
+static struct panel_reset_sequence lgd_poled_1080p_video_reset_seq = {
 	{1, 0, 1, }, {20, 2, 20, }, 2
 };
 
-static struct backlight lgd_1080p_video_backlight = {
+static struct backlight lgd_poled_1080p_video_backlight = {
 	1, 1, 255, 0, 2, "bl_ctrl_dcs"
 };
 
-#endif /*_PANEL_LGD_1080P_VIDEO_H_*/
+#endif /*_PANEL_LGD_POLED_1080P_VIDEO_H_*/

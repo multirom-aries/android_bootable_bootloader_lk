@@ -53,10 +53,10 @@
 #include "include/panel_nt35597_wqxga_video.h"
 #include "include/panel_nt35597_wqxga_cmd.h"
 // fergy: FLEX2->
-#include "include/panel_jdi_1440p_dsi_cmd.h"
-#include "include/panel_lgd_1080p_video.h"
-#include "include/panel_jdi_nt36850_qhd_dualdsi_cmd.h"
-#include "include/panel_lgd_r69007_qhd_dualdsi_cmd.h"
+//#include "include/panel_jdi_1440p_dsi_cmd.h"
+#include "include/panel_lgd_poled_1080p_video.h"
+/*#include "include/panel_jdi_nt36850_qhd_dualdsi_cmd.h"
+#include "include/panel_lgd_r69007_qhd_dualdsi_cmd.h"*/
 // fergy: FLEX2 <-
 
 /*---------------------------------------------------------------------------*/
@@ -73,10 +73,10 @@ HX8379A_TRULY_FWVGA_VIDEO_PANEL,
 NOVATEK_WQXGA_VIDEO_PANEL,
 NOVATEK_WQXGA_CMD_PANEL,
 // fergy: FLEX2 ->
-JDI_1440P_DSI_CMD_PANEL,
-LGD_1080P_VIDEO_PANEL,
-JDI_NT36850_QHD_DUALDSI_CMD_PANEL,
-LGD_R69007_QHD_DUALDSI_CMD_PANEL,
+//JDI_1440P_DSI_CMD_PANEL,
+LGD_POLED_1080P_VIDEO_PANEL,
+//JDI_NT36850_QHD_DUALDSI_CMD_PANEL,
+//LGD_R69007_QHD_DUALDSI_CMD_PANEL,
 // fergy: FLEX2 <-
 UNKNOWN_PANEL
 };
@@ -96,10 +96,10 @@ static struct panel_list supp_panels[] = {
 	{"nt35597_wqxga_video", NOVATEK_WQXGA_VIDEO_PANEL},
 	{"nt35597_wqxga_cmd", NOVATEK_WQXGA_CMD_PANEL},
 // fergy: FLEX2 ->
-	{"jdi_1440p_dsi_cmd", JDI_1440P_DSI_CMD_PANEL},
-	{"lgd_1080p_video", LGD_1080P_VIDEO_PANEL},
-	{"nt36850_qhd_dualdsi_cmd", JDI_NT36850_QHD_DUALDSI_CMD_PANEL},
-	{"lgd_r69007_qhd_dualdsi_cmd", LGD_R69007_QHD_DUALDSI_CMD_PANEL},
+//	{"jdi_1440p_dsi_cmd", JDI_1440P_DSI_CMD_PANEL},
+	{"lgd_poled_1080p_video", LGD_POLED_1080P_VIDEO_PANEL},
+//	{"nt36850_qhd_dualdsi_cmd", JDI_NT36850_QHD_DUALDSI_CMD_PANEL},
+//	{"lgd_r69007_qhd_dualdsi_cmd", LGD_R69007_QHD_DUALDSI_CMD_PANEL},
 // fergy: FLEX2 <-
 };
 
@@ -411,7 +411,7 @@ static bool init_panel_data(struct panel_struct *panelstruct,
 				sizeof(struct fb_compression));
 		break;
 // fergy: FLEX2 ->
-	case JDI_1440P_DSI_CMD_PANEL:
+/*	case JDI_1440P_DSI_CMD_PANEL:
 		pan_type = PANEL_TYPE_DSI;
 		pinfo->lcd_reg_en = 1;
 		panelstruct->paneldata    = &jdi_1440p_video_panel_data;
@@ -436,34 +436,34 @@ static bool init_panel_data(struct panel_struct *panelstruct,
 			= JDI_1440P_VIDEO_OFF_COMMAND;
 		memcpy(phy_db->timing,
 			jdi_1440p_video_timings, TIMING_SIZE);
-		break;
-	case LGD_1080P_VIDEO_PANEL:
+		break;*/
+	case LGD_POLED_1080P_VIDEO_PANEL:
 		pan_type = PANEL_TYPE_DSI;
 		pinfo->lcd_reg_en = 1;
-		panelstruct->paneldata    = &lgd_1080p_video_panel_data;
-		panelstruct->panelres     = &lgd_1080p_video_panel_res;
-		panelstruct->color        = &lgd_1080p_video_color;
-		panelstruct->videopanel   = &lgd_1080p_video_video_panel;
-		panelstruct->commandpanel = &lgd_1080p_video_command_panel;
-		panelstruct->state        = &lgd_1080p_video_state;
-		panelstruct->laneconfig   = &lgd_1080p_video_lane_config;
+		panelstruct->paneldata    = &lgd_poled_1080p_video_panel_data;
+		panelstruct->panelres     = &lgd_poled_1080p_video_panel_res;
+		panelstruct->color        = &lgd_poled_1080p_video_color;
+		panelstruct->videopanel   = &lgd_poled_1080p_video_video_panel;
+		panelstruct->commandpanel = &lgd_poled_1080p_video_command_panel;
+		panelstruct->state        = &lgd_poled_1080p_video_state;
+		panelstruct->laneconfig   = &lgd_poled_1080p_video_lane_config;
 		panelstruct->paneltiminginfo
-			= &lgd_1080p_video_timing_info;
+			= &lgd_poled_1080p_video_timing_info;
 		panelstruct->panelresetseq
-					 = &lgd_1080p_video_panel_reset_seq;
-		panelstruct->backlightinfo = &lgd_1080p_video_backlight;
+					 = &lgd_poled_1080p_video_panel_reset_seq;
+		panelstruct->backlightinfo = &lgd_poled_1080p_video_backlight;
 		pinfo->mipi.panel_on_cmds
-			= lgd_1080p_video_on_command;
+			= lgd_poled_1080p_video_on_command;
 		pinfo->mipi.num_of_panel_on_cmds
-			= LGD_1080P_VIDEO_ON_COMMAND;
+			= LGD_POLED_1080P_VIDEO_ON_COMMAND;
 		pinfo->mipi.panel_off_cmds
-			= lgd_1080p_video_off_command;
+			= lgd_poled_1080p_video_off_command;
 		pinfo->mipi.num_of_panel_off_cmds
-			= LGD_1080P_VIDEO_OFF_COMMAND;
+			= LGD_POLED_1080P_VIDEO_OFF_COMMAND;
 		memcpy(phy_db->timing,
-			lgd_1080p_video_timings, TIMING_SIZE);
+			lgd_poled_1080p_video_timings, TIMING_SIZE);
 		break;
-	case JDI_NT36850_QHD_DUALDSI_CMD_PANEL:
+/*	case JDI_NT36850_QHD_DUALDSI_CMD_PANEL:
 		dprintf(ALWAYS, " Novatek 36850 command mode panel selected\n");
 		pan_type = PANEL_TYPE_DSI;
 		pinfo->lcd_reg_en = 1;
@@ -519,7 +519,7 @@ static bool init_panel_data(struct panel_struct *panelstruct,
 			= LGD_R69007_QHD_DUALDSI_CMD_OFF_COMMAND;
 		memcpy(phy_db->timing,
 			lgd_r69007_qhd_dualdsi_cmd_timings, TIMING_SIZE);
-		break;
+		break;*/
 // fergy: FLEX2 <-
 	default:
 	case UNKNOWN_PANEL:

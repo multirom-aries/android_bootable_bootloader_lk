@@ -54,6 +54,8 @@
 #define SIM_DUALDSI_CMD_PANEL "sim_dualdsi_cmd_panel"
 
 #define SIM_DSI_ID "dsi:0:"
+#define SIM_VIDEO_0_PANEL_NODE "qcom,mdss_dsi_sim_video_0"
+#define SIM_VIDEO_1_PANEL_NODE "qcom,mdss_dsi_sim_video_1"
 #define SIM_VIDEO_PANEL_NODE "qcom,mdss_dsi_sim_video"
 #define SIM_DUALDSI_VIDEO_PANEL_NODE "qcom,mdss_dsi_dual_sim_video"
 #define SIM_DUALDSI_VIDEO_SLAVE_PANEL_NODE "qcom,mdss_dsi_dual_sim_video"
